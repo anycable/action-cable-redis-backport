@@ -1,0 +1,6 @@
+source "https://rubygems.org"
+
+gem "redis"
+gem "rails", github: "rails/rails"
+
+gemspec path: ".."
