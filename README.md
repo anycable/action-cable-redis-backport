@@ -6,6 +6,11 @@ This gem backport Redis adapter with connection failure recovery support from Ra
 
 Works with Rails 5+.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/assets/fly-sponsored-landscape-dark.svg">
+  <img alt="Sponsored by Fly.io" src="./assets/fly-sponsored-landscape-light.svg" height="97" width="259">
+</picture>
+
 ## Usage
 
 Install the gem:
