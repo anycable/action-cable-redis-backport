@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "action-cable-redis-backport"
-  s.version = "1.0.0"
+  s.version = "1.0.1"
   s.authors = ["Vladimir Dementyev"]
   s.email = ["dementiev.vm@gmail.com"]
   s.homepage = "http://github.com/palkan/action-cable-redis-backport"
