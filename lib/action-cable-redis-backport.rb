@@ -22,7 +22,7 @@ module ActionCableRedisBackport
 
     private
       if ::Redis::VERSION < "5"
-        ConnectionError = ::Redis::ConnectionError
+        ConnectionError = ::Redis::BaseConnectionError
       else
         ConnectionError = RedisClient::ConnectionError
       end
