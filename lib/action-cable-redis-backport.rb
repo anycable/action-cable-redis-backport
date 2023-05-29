@@ -17,7 +17,11 @@ module ActionCableRedisBackport
 
       @reconnect_attempt = 0
       @reconnect_attempts = ::ActionCable.server.config.cable&.fetch("reconnect_attempts", 1)
-      @reconnect_attempts = Array.new(@reconnect_attempts, 0) if @reconnect_attempts.is_a?(Integer)
+      @reconnect_attempts = if @reconnect_attempts.is_a?(Integer)
+        reconnect_delay = ::ActionCable.server.config.cable["reconnect_delay"] || 0
+        reconnect_delay_max = ::ActionCable.server.config.cable["reconnect_delay_max"] || 0.5
+        @reconnect_attempts.times.map { |i| [(reconnect_delay * 2**i), reconnect_delay_max].min }
+      end
     end
 
     private
