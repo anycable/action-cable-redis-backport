@@ -2,7 +2,11 @@
 
 require "action_cable"
 
-return if ActionCable::VERSION::MAJOR >= 7 && ActionCable::VERSION::MINOR >= 1
+if ActionCable::VERSION::MAJOR >= 7 && ActionCable::VERSION::MINOR >= 1
+  puts "[action-cable-redis-backport] NOTE: You are running the action-cable-redis-backport gem on Rails 7.1+. This backport is not needed on versions after ActionCable 7.1.0. You can now safely remove this gem from your Gemfile."
+
+  return
+end
 
 require "action_cable/subscription_adapter/redis"
 
