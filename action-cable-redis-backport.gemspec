@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "action-cable-redis-backport"
-  s.version = "1.0.2"
+  s.version = "1.0.3"
   s.authors = ["Vladimir Dementyev"]
   s.email = ["dementiev.vm@gmail.com"]
   s.homepage = "http://github.com/palkan/action-cable-redis-backport"
@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   if ENV["CI"] == "true"
     s.add_dependency "actioncable", ">= 5.0"
   else
-    s.add_dependency "actioncable", ">= 5.0", "< 7.1"
+    s.add_dependency "actioncable", ">= 5.0"
   end
 
   s.add_development_dependency "bundler", ">= 1.15"
